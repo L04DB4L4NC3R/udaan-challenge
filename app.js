@@ -5,6 +5,7 @@ const mongoose = require("mongoose")
 
 const app = express()
 
+app.use(require("cors")())
 app.use(bp.urlencoded({extended:false}))
 app.use(bp.json())
 require("dotenv").config()

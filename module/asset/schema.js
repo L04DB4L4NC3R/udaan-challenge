@@ -1,15 +1,11 @@
-const mongoose = require("mongoose")
+const mongoose = require('mongoose');
 
 const assetSchema = new mongoose.Schema({
-	name: String
-})
+  name: String,
+});
 
-const assetModel = mongoose.model("asset", assetSchema)
+const assetModel = mongoose.model('asset', assetSchema);
 
-module.exports.AddAsset = (data) => {
-	return assetModel.create(data)
-}
+module.exports.AddAsset = data => assetModel.create(data);
 
-module.exports.ViewAssets = () => {
-	return assetModel.findOne({})
-}
+module.exports.ViewAssets = () => assetModel.findOne({});

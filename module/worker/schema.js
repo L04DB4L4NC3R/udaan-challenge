@@ -1,12 +1,9 @@
-const mongoose = require("mongoose")
+const mongoose = require('mongoose');
 
 const workerSchema = new mongoose.Schema({
-	name: String
-})
+  name: String,
+});
 
-const workerModel = mongoose.model("worker", workerSchema)
+const workerModel = mongoose.model('worker', workerSchema);
 
-module.exports.AddWorker = (data) => {
-	return workerModel.create(data)
-}
-
+module.exports.AddWorker = data => workerModel.create(data);
